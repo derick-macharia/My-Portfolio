@@ -1,0 +1,105 @@
+    /* General Styles */
+    .body {
+        font-family: 'Roboto', sans-serif; /* Modern, clean font */
+        margin: 0;
+        padding: 0;
+        background-color: #f9fafb; /* Soft background color for readability */
+        color: #333; /* Text color for contrast */
+        line-height: 1.6;
+    }
+
+    /* Header Section */
+    .header {
+        background-color: #1a73e8; /* Bright, eye-catching blue */
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+    }
+
+    .header h1 {
+        margin: 0;
+        font-size: 2.5em; /* Larger font for header title */
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif; /* Bold and stylish font for title */
+    }
+
+    .header p {
+        margin: 10px 0 0;
+        font-size: 1.2em;
+    }
+
+    /* Main Content */
+    .content {
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .content h2 {
+        color: #1a73e8; /* Matches header color */
+        font-size: 2em;
+        margin-bottom: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+    }
+
+    .content p {
+        font-size: 1.1em;
+        margin-bottom: 40px;
+    }
+
+    /* Projects Section */
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .project {
+        background-color: #fff;
+        border: 1px solid #e0e0e0; /* Subtle border for definition */
+        padding: 20px;
+        flex: 1;
+        min-width: 280px;
+        border-radius: 8px; /* Smooth rounded corners */
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow for elegance */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+    }
+
+    .project:hover {
+        transform: translateY(-10px); /* Lifts the card on hover */
+        box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1); /* Enhances the shadow */
+    }
+
+    .project h3 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5em;
+        margin-top: 0;
+        color: #333;
+    }
+
+    .project p {
+        font-size: 1.1em;
+        color: #555;
+    }
+
+    /* Footer Section */
+    .footer {
+        background-color: #1a73e8;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 1em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1); /* Adds depth to footer */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .projects {
+            flex-direction: column;
+        }
+    }
