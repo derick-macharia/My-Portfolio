@@ -1,65 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Portfolio</title>
+    <title>Derick Macharia - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-
     <header>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <h1>Derick Macharia</h1>
-        <p>Welcome to my personal portfolio.</p>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
     </header>
+    <section id="home">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Hi! I'm Derick Macharia, a passionate developer and tech enthusiast. Explore my projects, blog, and skills I can offer below.</p>
+    </section>
 
-    <div class="content">
+    <section id="about">
         <h2>About Me</h2>
-        <p>Hi! I'm a developer, passionate and self-driven individual with a keen interest in tech innovation and education. 
-            Dedicated to learning and sharing knowledge with peers, and believes in the transformitive power of technology and 
-            and education, to create a positive change within the community. This below, is a showcase of my projects.</p>
+        <p>I’m <b>Derick Macharia</b> A student in <b>Kirinyaga University</b>, passionate software developer and web 
+            enthusiast with a strong foundation in <b>Kirinyaga University</b>. As a Bachelor of Education Science 
+            (Physics/Mathematics) student, I love blending logic with creativity to build clean, responsive, and visually 
+            appealing web applications.
 
-        <h2>My Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Registration-form</h3>
-                <p>Learning HTML forms by building a signup page. That is how to control what types of data people can type
-                     into your form, and some new CSS tools for styling your page. This page is live
-                      <a href="https://derick-macharia.github.io/Registration-form/">here.</a></p>
+            I have experience in <b>HTML, CSS, JavaScript, and responsive design</b>, along with an interest in <b>cloud 
+            technologies</b> like <b>Azure</b>. Beyond coding, I enjoy <b>teaching and sharing knowledge through mentoring 
+            peers in web development and moderating tech events</b>.
+            
+            I’m always learning, exploring new technologies, and refining my craft to build <b>impactful and efficient digital solutions</b>. 
+            Let’s connect and create something amazing! 🚀
+        </p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="container">
+            <div class="skill-category">
+                <h3>👨‍💻 Web Development</h3>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Responsive Web Design</li>
+                    <li>Form Styling & UI/UX Basics</li>
+                </ul>
             </div>
-            <div class="project">
-                <h3>CSS-Color-Makers</h3>
-                <p>Learn different ways to set color values and how to pair colors with each other. This page is live
-                    <a href="https://derick-macharia.github.io/CSS-Color-Makers/">here.</a>
-                </p>
-            </div>
-            <div class="project">
-                <h3>Cafe-Menu</h3>
-                <p>Learn CSS by designing a menu page for a cafe webpage. The menu page is live
-                    <a href="https://derick-macharia.github.io/Cafe-Menu/">here.</a>
-                </p>
-            </div>
-            <div class="project">
-                <h3>Cat-Photo-App </h3>
-                <p>This project is to learn the most common HTML tags by building a Cat photo app. This page is live
-                    <a href="https://derick-macharia.github.io/Cat-Photo-App/">here.</a>
-                </p>
-            </div>
-            <div class="project">
-                <h3>Testimonials-grid-section </h3>
-                <p>Solution to the Testimonials Grid Section challenge, implemented using HTML and CSS. It features a 
-                    responsive grid layout displaying customer testimonials, demonstrating my proficiency in front-end 
-                    development and layout design. This page is live 
-                    <a href="https://derick-macharia.github.io/Testimonials-grid-section/">here.</a>
-                </p>
+    
+            <div class="skill-category">
+                <h3>☁️ Cloud & DevOps</h3>
+                <ul>
+                    <li>Azure Fundamentals</li>
+                    <li>Cloud Computing Basics</li>
+                    <li>Static Web Hosting on Azure</li>
+                </ul>
             </div>
         </div>
-    </div>
 
-    <div class="footer">
-        <p>© 2024 My Portfolio</p>
-    </div>
+        <div class="container">
+            <div class="skill-category">
+                <h3>🎤 Public Speaking & Technical Writing</h3>
+                <ul>
+                    <li>Event Moderation (AzureDay, CSK Hack Night)</li>
+                    <li>Writing Technical Insights on LinkedIn</li>
+                </ul>
+            </div>
+    
+            <div class="skill-category">
+                <h3>🔍 Cybersecurity & Ethical Hacking</h3>
+                <ul>
+                    <li>Steganography</li>
+                    <li>Web Security Basics</li>
+                </ul>
+            </div>
+        </div>
 
+        <div class="container">
+            <div class="skill-category">
+                <h3>📊 Mathematics & Physics</h3>
+                <ul>
+                    <li>Discrete Mathematics and Linear Algebra & Transformations</li>
+                    <li>Probability & Statistics and Differential & Integral calculus </li>
+                    <li>Linear Algebra & Transformations, and vector analysis</li>
+                    <li>Electricity & Magnetism</li>
+                    <li>Heat & Thermodynamics</li>
+                    <li>Quantum Mechanics and waves & Osscillations</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Certifications Section -->
+        <div class="container">
+            <div class="certifications">
+                <h3>Here are my certifications</h3>
+                <div class="certificate">
+                    <p><strong>Responsive Web Design</strong> - freeCodeCamp</p>
+                    <p>Earned: January 2025</p>
+                    <p><a href="https://freecodecamp.org/certification/fcc7062dcb6-7adf-46d1-a417-ec4f07d6d833/responsive-web-design" target="_blank" rel="noopener">Verify Certification</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn" data-category="all">All</button>
+            <button class="filter-btn" data-category="completed">Completed</button>
+            <button class="filter-btn" data-category="in-progress">In Progress</button>
+        </div>
+        
+        <div class="projects">
+            <!-- In Progress -->
+            <div class="project in-progress">
+                <h3>Green Tech Web</h3>
+                <p>A project focused on sustainable tech solutions. <a href="https://github.com/derick-macharia/Green-Tech-Web">View on GitHub</a></p>
+            </div>
+            
+            <!-- Completed Projects -->
+            <div class="project completed">
+                
+                <h3>Registration Form</h3>
+                <p>A simple sign-up form with validation. <a href="https://derick-macharia.github.io/Registration-form/">Live</a> | <a href="https://github.com/derick-macharia/Registration-form">GitHub</a></p>
+            </div>
+            <div class="project completed">
+                <h3>CSS Color Makers</h3>
+                <p>Exploring different color properties in CSS. <a href="https://derick-macharia.github.io/CSS-Color-Makers/">Live</a> | <a href="https://github.com/derick-macharia/CSS-Color-Makers">GitHub</a></p>
+            </div>
+            <div class="project completed">
+                <h3>Cafe Menu</h3>
+                <p>CSS styling challenge for a menu layout. <a href="https://derick-macharia.github.io/Cafe-Menu/">Live</a> | <a href="https://github.com/derick-macharia/Cafe-Menu">GitHub</a></p>
+            </div>
+            <div class="project completed">
+                <h3>Cat Photo App</h3>
+                <p>Basic HTML elements practice. <a href="https://derick-macharia.github.io/Cat-Photo-App/">Live</a> | <a href="https://github.com/derick-macharia/Cat-Photo-App">GitHub</a></p>
+            </div>
+            <div class="project completed">
+                <h3>Testimonials Grid</h3>
+                <p>Responsive grid-based testimonials. <a href="https://derick-macharia.github.io/Testimonials-grid-section/">Live</a> | <a href="https://github.com/derick-macharia/Testimonials-grid-section">GitHub</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2>📖 My Blog</h2>
+        <div class="blog-post">
+            <h3>Portfolio Playbook: Build Your Personal Website</h3>
+            <p>
+                Looking to create a professional portfolio? My step-by-step guide walks you through 
+                <b>structuring with HTML, styling with CSS, adding JavaScript interactions, and deploying your site</b>. 
+                Whether you're a beginner or refining your portfolio, this playbook will help you **showcase your work effectively**.
+            </p>
+            <a href="https://derick-macharia.github.io/Portfolio-playbook/" class="btn">Read More</a>
+        </div>
+    </section>
+    
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Connect with me on:</p>
+        <div class="social-links">
+            <a href="mailto:nariderick@gmail.com" aria-label="Email" alt="Email">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://x.com/Derick_Made002" target="_blank" rel="noopener" aria-label="Twitter" alt="Twitter">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="https://www.instagram.com/made002_derick/" target="_blank" rel="noopener" aria-label="Instagram" alt="Instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://ke.linkedin.com/in/derick-macharia-04ba092b6" target="_blank" rel="noopener" aria-label="LinkedIn" alt="LinkedIn">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/derick-macharia" target="_blank" rel="noopener" aria-label="GitHub" alt="GitHub">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Derick Macharia | Built with ❤️</p>
+    </footer>
 </body>
 </html>

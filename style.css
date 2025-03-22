@@ -1,105 +1,469 @@
-    /* General Styles */
-    .body {
-        font-family: 'Roboto', sans-serif; /* Modern, clean font */
-        margin: 0;
-        padding: 0;
-        background-color: #f9fafb; /* Soft background color for readability */
-        color: #333; /* Text color for contrast */
-        line-height: 1.6;
-    }
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fafb;
+    color: #333;
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
+}
 
-    /* Header Section */
-    .header {
-        background-color: #1a73e8; /* Bright, eye-catching blue */
-        color: #fff;
-        padding: 15px 0;
-        text-align: center;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
-    }
+/* Header Section */
+header {
+    background-color: #1a73e8;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-    .header h1 {
-        margin: 0;
-        font-size: 2.5em; /* Larger font for header title */
-        font-weight: bold;
-        font-family: 'Poppins', sans-serif; /* Bold and stylish font for title */
-    }
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
 
-    .header p {
-        margin: 10px 0 0;
-        font-size: 1.2em;
-    }
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 5px 15px;
+}
 
-    /* Main Content */
-    .content {
-        padding: 40px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+/* Dark Mode Button */
+#dark-mode-toggle {
+    background-color: #fff;
+    color: #1a73e8;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
 
-    .content h2 {
-        color: #1a73e8; /* Matches header color */
-        font-size: 2em;
-        margin-bottom: 20px;
-        font-family: 'Poppins', sans-serif;
-        font-weight: bold;
-    }
+/* Sections */
+section {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh; /* Make each section take up the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
 
-    .content p {
-        font-size: 1.1em;
-        margin-bottom: 40px;
-    }
+/* skills */
+h2 {
+    color: #1a73e8;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+#skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-    /* Projects Section */
+.skill-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.skill-category {
+    flex: 1; /* Make all skill-category divs equal in size */
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    min-width: 0; /* Prevent overflow issues */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category:hover {
+    transform: scale(1.02);
+}
+
+.skill-category h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.skill-category ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+/* Skills Section */
+.container {
+    display: flex;
+    flex: 1;
+    justify-content: center; /* Distribute space evenly */
+    align-items: flex-start;
+    gap: 20px;
+    margin: 0;
+    width: 100%;
+    padding: 20px;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+/* Certifications Section */
+.certifications {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.certification-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.certificate {
+    flex: 1;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.certificate p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.certificate a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.certificate a:hover {
+    text-decoration: underline;
+}
+
+/* Projects */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.project {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 8px 15px;
+    border: none;
+    background-color: #1a73e8;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-btn:hover {
+    background-color: #135abc;
+}
+#blog {
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.blog-post h3 {
+    color: #0055aa;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    color: #333;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #0077cc;
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #0055aa;
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #003366; /* Dark blue for light mode */
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0055aa; /* Slightly lighter blue on hover */
+}
+
+.contact-section .social-links a {
+    color: #1a73e8; /* Blue for contact section */
+}
+
+.contact-section .social-links a:hover {
+    color: #135abc; /* Darker blue on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #1a73e8;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1em;
+    position: relative;
+    width: 100%;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+} 
+
+/* Footer Social Media Section */
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #66ccff;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f9fafb;
+}
+
+body.dark-mode .project {
+    background-color: #003366; /* Dark blue background for dark mode */
+    color: #ffffff; /* White font color for dark mode */
+    border: 1px solid #0055aa; /* Slightly lighter blue border */
+}
+
+body:not(.dark-mode) .project {
+    background-color: #ffffff; /* White background for light mode */
+    color: #333333; /* Dark font color for light mode */
+    border: 1px solid #e0e0e0; /* Light gray border */
+}
+
+/* Light mode styles */
+[data-theme="light"] .project {
+    background-color: #ffffff; /* White background for light mode */
+    color: #333333; /* Dark font color for light mode */
+    border: 1px solid #e0e0e0; /* Light gray border */
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .project {
+    background-color: #003366; /* Dark blue background for dark mode */
+    color: #ffffff; /* White font color for dark mode */
+    border: 1px solid #0055aa; /* Slightly lighter blue border */
+}
+
+/* Ensure links in dark mode are visible */
+[data-theme="dark"] .project a {
+    color: #66ccff; /* Light blue for links in dark mode */
+}
+
+body.dark-mode #skills {
+    background-color: #000913; /* Dark blue background for skills section in dark mode */
+    color: #f9fafb; /* Light text color for better contrast */
+}
+
+body.dark-mode .skill-category {
+    background-color: #012750; /* Blue-black background for dark mode */
+    color: #ffffff; /* White text color for dark mode */
+    border: 1px solid #0055aa; /* Slightly lighter blue border for better contrast */
+}
+
+body.dark-mode .skill-category h3 {
+    color: #ffffff; /* White text color for headings in dark mode */
+}
+
+body.dark-mode .certifications {
+    background-color: #012750; /* Blue-black background for certifications in dark mode */
+    color: #ffffff; /* White text color for certifications in dark mode */
+    border: 1px solid #0055aa; /* Slightly lighter blue border for better contrast */
+}
+
+body.dark-mode .certifications h3 {
+    color: #ffffff; /* White text color for headings in certifications */
+}
+
+body.dark-mode .certificate {
+    background-color: #011830; /* Blue-black background for individual certificates */
+    color: #ffffff; /* White text color for certificates */
+    border: 1px solid #0055aa; /* Slightly lighter blue border */
+}
+
+body.dark-mode #blog {
+    background-color: #012750; /* Blue-black background for blog section in dark mode */
+    color: #ffffff; /* White text color for blog section */
+    border: 1px solid #0055aa; /* Slightly lighter blue border for better contrast */
+}
+
+body.dark-mode #blog h3 {
+    color: #ffffff; /* White text color for blog headings */
+}
+
+body.dark-mode #blog p {
+    color: #f0f0f0; /* Light gray text color for blog content */
+}
+
+body.dark-mode #blog .btn {
+    background-color: #0055aa; /* Dark blue button background */
+    color: #ffffff; /* White text color for buttons */
+}
+
+body.dark-mode #blog .btn:hover {
+    background-color: #003366; /* Darker blue for hover effect */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
     .projects {
+        flex-direction: column;
+    }
+
+    .hamburger {
         display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
     }
 
-    .project {
-        background-color: #fff;
-        border: 1px solid #e0e0e0; /* Subtle border for definition */
-        padding: 20px;
-        flex: 1;
-        min-width: 280px;
-        border-radius: 8px; /* Smooth rounded corners */
-        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow for elegance */
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
-    }
-
-    .project:hover {
-        transform: translateY(-10px); /* Lifts the card on hover */
-        box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1); /* Enhances the shadow */
-    }
-
-    .project h3 {
-        font-family: 'Roboto', sans-serif;
-        font-size: 1.5em;
-        margin-top: 0;
-        color: #333;
-    }
-
-    .project p {
-        font-size: 1.1em;
-        color: #555;
-    }
-
-    /* Footer Section */
-    .footer {
+    nav {
+        display: none;
+        flex-direction: column;
         background-color: #1a73e8;
-        color: #fff;
-        text-align: center;
-        padding: 20px 0;
-        font-size: 1em;
-        position: fixed;
-        bottom: 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
         width: 100%;
-        box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1); /* Adds depth to footer */
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .projects {
-            flex-direction: column;
-        }
+    nav.active {
+        display: flex;
     }
+
+    nav a {
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1em;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Add spacing between skill categories */
+    }
+
+    .skill-category {
+        width: 100%; /* Make each skill category take full width */
+    }
+}
+
+/* Responsive styles for social links */
+@media (max-width: 768px) {
+    .social-links {
+        flex-wrap: wrap; /* Allow wrapping to a new row */
+        justify-content: center; /* Center the links */
+        gap: 10px; /* Add spacing between links */
+    }
+
+    .social-links a {
+        flex: 1 1 calc(33.33% - 10px); /* Make each link take up a third of the row with spacing */
+        text-align: center; /* Center align the text/icons */
+    }
+}
+
+/* Dark Mode */
+body.dark-mode .social-links a {
+    color: #fff; /* White for dark mode */
+}
+
+body.dark-mode .social-links a:hover {
+    color: #66ccff; /* Light blue on hover in dark mode */
+}
